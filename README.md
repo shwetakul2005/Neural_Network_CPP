@@ -45,8 +45,9 @@ NeuralNetwork/
 │ ├── loss.hpp
 │ └── mse.hpp
 │
-├── neural_network.hpp
-├── main.cpp
+|── network/
+| ├── neural_network.hpp
+| └── main.cpp
 └── README.md
 ```
 
@@ -150,5 +151,6 @@ By constructing each component manually, it bridges the gap between theoretical 
 It also demonstrates how high-level frameworks (such as TensorFlow or PyTorch) function internally.
 
 ---
+
 
 
