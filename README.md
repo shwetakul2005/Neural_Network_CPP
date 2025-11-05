@@ -29,7 +29,7 @@ The main goals of this project are:
 ## 4. System Architecture
 The project is organized into modular components as shown below:
 ```
-NeuralNetwork/
+src/
 │
 ├── activations/
 │ ├── activation.hpp
@@ -151,6 +151,7 @@ By constructing each component manually, it bridges the gap between theoretical 
 It also demonstrates how high-level frameworks (such as TensorFlow or PyTorch) function internally.
 
 ---
+
 
 
 
