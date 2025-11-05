@@ -63,39 +63,29 @@ Each component has a specific responsibility:
 ### 5.1 Forward Propagation
 Each layer computes the output as:
 
-\[
-z = Wx + b
-\]
-\[
-a = f(z)
-\]
+`z = W * x + b`  
+`a = f(z)`
 
-where \( f \) is the activation function (e.g., Sigmoid or ReLU).
+where `f` is the activation function (e.g., Sigmoid or ReLU).
 
 ### 5.2 Loss Computation
 The network’s output is compared with target values using a chosen loss function, such as:
 
-\[
-L = \frac{1}{n} \sum (y_{pred} - y_{true})^2
-\]
+`L = (1/n) * Σ (y_pred - y_true)²`
 
 ### 5.3 Backpropagation
 Gradients of the loss function are computed with respect to each parameter using the chain rule:
 
-\[
-\frac{\partial L}{\partial W} = \frac{\partial L}{\partial a} \cdot \frac{\partial a}{\partial z} \cdot \frac{\partial z}{\partial W}
-\]
+`∂L/∂W = (∂L/∂a) · (∂a/∂z) · (∂z/∂W)`
 
 These gradients are used to update weights and biases.
 
 ### 5.4 Gradient Descent
 Parameters are updated iteratively as:
 
-\[
-W = W - \eta \cdot \frac{\partial L}{\partial W}
-\]
+`W = W - η * (∂L/∂W)`
 
-where \( \eta \) is the learning rate.
+where `η` is the learning rate.
 
 ---
 
@@ -160,4 +150,5 @@ By constructing each component manually, it bridges the gap between theoretical 
 It also demonstrates how high-level frameworks (such as TensorFlow or PyTorch) function internally.
 
 ---
+
 
