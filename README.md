@@ -137,11 +137,26 @@ int main() {
 ## 7. Build and Execution
 
 ### Compilation:
+#### Use the following command to compile all C++ source files recursively:
+#### For PowerShell (Windows):
 ```
-g++ main.cpp -o neural_network
+g++ (Get-ChildItem -Recurse -Filter *.cpp | ForEach-Object { $_.FullName }) -o main
+```
+#### Linux/Mac users, use the equivalent:
+```
+g++ $(find . -name "*.cpp") -o main
 ```
 
 ### Execution:
 ```
-./neural_network
+./main
 ```
+---
+
+## 8. Conclusion
+
+This project provided an in-depth understanding of the inner workings of neural networks and their implementation from scratch.
+By constructing each component manually, it bridges the gap between theoretical understanding and practical implementation.
+It also demonstrates how high-level frameworks (such as TensorFlow or PyTorch) function internally.
+
+---
